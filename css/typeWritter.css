@@ -1,0 +1,27 @@
+#staticText{
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 0;
+}
+
+#dinamicText{
+    color: #34c759;
+    font-weight: 600;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(68, 68, 68); }
+}
+
+#dinamicText::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    color: black;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
